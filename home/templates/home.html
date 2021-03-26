@@ -1,1 +1,46 @@
 {% extends 'base.html' %}
+<div>{% block title %} {{title}} {% endblock %}</div>
+{% block content %}
+<div id="blog" class="blog-area mt-2">
+  <div class="container">
+    <div class="row">
+      {% for i in '012'|make_list %}
+      <div class="col-sm-12 col-md-4">
+        <div class="single-blog">
+          <div class="card">
+            <div class="overflow">
+              <img
+                style="height: 300px"
+                class="card-img-top"
+                src=""
+                alt="Card image cap"
+              />
+            </div>
+            <div class="card-body">
+              <a href="#"
+                ><p class="blog-date">
+                  Dec 17 2019 <br />
+                  Posted by Syawal
+                </p>
+              </a>
+
+              <a href="#"
+                ><h6
+                  class="card-title text-dark text-uppercase font-weight-bold"
+                >
+                  data
+                </h6></a
+              >
+              <p class="card-text mb-30"></p>
+              <a href="" class="btn btn-outline-primary style-3 text-dark"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
