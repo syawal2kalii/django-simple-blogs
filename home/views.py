@@ -5,4 +5,21 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'title': 'blogs',
+        'posts': [
+            {
+                'posted': 'syawal',
+                'title': 'artikel 1'
+            },
+            {
+                'posted': 'anu',
+                'title': ' artikel 2'
+            },
+            {
+                'posted': 'syawal',
+                'title': ' artikel 3'
+            }
+        ]
+    }
+    return render(request, 'home.html', context)
