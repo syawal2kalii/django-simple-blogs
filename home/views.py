@@ -23,3 +23,10 @@ def home(request):
         ]
     }
     return render(request, 'home.html', context)
+
+
+def detail(request, id_article):
+    context = {
+        'id_article': id_article,
+    }
+    return render(request, 'detail.html', context)
