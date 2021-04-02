@@ -30,3 +30,11 @@ def detail(request, id_article):
         'id_article': id_article,
     }
     return render(request, 'detail.html', context)
+
+
+def details(request, id_article, users_id):
+    context = {
+        'id_article': id_article,
+        'users': users
+    }
+    return render(request, 'detail.html', context)
