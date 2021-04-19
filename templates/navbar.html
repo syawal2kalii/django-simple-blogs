@@ -14,12 +14,15 @@
     <a class="navbar-brand" href="#">Simple Blog</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href=""
+        <a class="nav-link" href="{% url 'home' %}"
           >Article <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
         <a class="nav-link" href="">Add Article</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'add' %}">Add User</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
