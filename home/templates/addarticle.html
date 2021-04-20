@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row justify-content-md-center">
+  <div class="col-md-3">
+    <table>
+      <form action="" method="post">
+        {% csrf_token %}
+        <div>{{form.title.label_tag}} {{form.title}}</div>
+        <div>{{form.content.label_tag}} {{form.content}}</div>
+        <div>{{form.category.label_tag}} {{form.category}}</div>
+        <div>
+          <button type="submit" class="btn btn-primary mt-2">OK</button>
+        </div>
+      </form>
+    </table>
+  </div>
+</div>
+
+{% endblock content %}

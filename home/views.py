@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from .forms import Users
+from .forms import Users, Article
 from .models import article
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
 
@@ -55,3 +56,16 @@ def adduser(request):
         )
         return HttpResponseRedirect('/adduser/')
     return render(request, 'adduser.html', context={'form': Users()})
+
+
+def addarticle(request):
+    user = authenticate(request, username='syawal', password='testestes')
+    # print(user)
+    if request.method == 'POST':
+        article.objects.create(
+            title=request.POST['title'],
+            content=request.POST['content'],
+            category=request.POST['category'],
+            user=user)
+        return HttpResponseRedirect('/addarticle/')
+    return render(request, 'addarticle.html', context={'form': Article()})

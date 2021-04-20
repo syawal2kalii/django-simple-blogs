@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class article(models.Model):
     title = models.CharField(max_length=255)
-    context = models.TextField()
+    content = models.TextField()
     category = models.CharField(max_length=255)
     slug = models.TextField()
     imgurl = models.TextField()

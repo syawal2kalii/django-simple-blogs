@@ -7,4 +7,5 @@ urlpatterns = [
     # multi parameter
     path('detail/<str:id_article>/<int:users_id>/', views.details),
     path('adduser/', views.adduser, name='add'),
+    path('addarticle/', views.addarticle, name='addarticle'),
 ]
